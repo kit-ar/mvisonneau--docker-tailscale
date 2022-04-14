@@ -24,7 +24,7 @@ docker run -d \
 # Install the relay
 ~$ helm install \
   tailscale-relay \
-  mvisonneau/tailscale-relay \
+  ghcr.io/kit-ar/mvisonneau--tailscale-relay \
   --set config.authKey=<your_auth_key>
 ```
 
