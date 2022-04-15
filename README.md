@@ -2,34 +2,15 @@
 
 Run Tailscale (agent/relay) in a container
 
+inspired in https://github.com/mvisonneau/helm-charts/blob/main/charts/tailscale-relay)
+
 ## Usage
 
-### Docker
+* ghcr.io/kit-ar/tailscale-relay
+  has entrypoint based on
+  * https://github.com/tailscale/tailscale/blob/main/Dockerfile
+  * https://github.com/tailscale/tailscale/blob/main/docs/k8s/Dockerfile
 
-```bash
-docker run -d \
-  -e TAILSCALE_AUTH_KEY=<your_auth_key> \
-  -v /dev/net/tun:/dev/net/tun \
-  --network host \
-  --privileged \
-  mvisonneau/tailscale
-```
+* ghcr.io/kit-ar/tailscale-relay--mvisonneau
+  has entrypoint based on https://github.com/mvisonneau/helm-charts/blob/main/charts/tailscale-relay)
 
-### Kubernetes
-
-```bash
-# Add the helm repository to your local client
-~$ helm repo add mvisonneau https://charts.visonneau.fr
-
-# Install the relay
-~$ helm install \
-  tailscale-relay \
-  ghcr.io/kit-ar/mvisonneau--tailscale-relay \
-  --set config.authKey=<your_auth_key>
-```
-
-More information on [how to use the chart here](https://github.com/mvisonneau/helm-charts/blob/main/charts/tailscale-relay).
-
-## Credits
-
-inspired by @hamishforbes [gist](https://gist.github.com/hamishforbes/2ac7ae9d7ea47cad4e3a813c9b45c10f)
