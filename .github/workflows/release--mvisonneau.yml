@@ -19,7 +19,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=ghcr.io/kit-ar/mvisonneau--tailscale-relay
+          DOCKER_IMAGE=ghcr.io/kit-ar/tailscale-relay--mvisonneau
           VERSION=latest
 
           # If this is git tag, use the tag name as a docker tag
