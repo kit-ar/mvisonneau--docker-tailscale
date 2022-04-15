@@ -2,7 +2,9 @@
 
 Run Tailscale (agent/relay) in a container
 
-inspired in https://github.com/mvisonneau/helm-charts/blob/main/charts/tailscale-relay)
+Source: https://github.com/kit-ar/mvisonneau--tailscale-docker
+
+Inspired in https://github.com/mvisonneau/helm-charts/blob/main/charts/tailscale-relay)
 
 ## Usage
 
